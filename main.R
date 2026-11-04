@@ -8,7 +8,12 @@
     bmi <- weight*703 / (height^2)
     return(bmi)
   }
-main
 
-Part2
+#Part2
 calculate_bmi(170, 63)
+=======
+  ## part 5: # add the BMI value to the data
+  patients$bmi <- calculate_bmi(patients$weight, patients$height)
+  # Using the mapply() function
+  patients$bmi_cat <- mapply(categorize_bmi, patients$weight, patients$height)
+ main
