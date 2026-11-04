@@ -9,8 +9,10 @@
     return(bmi)
   }
 
-#Part2
+=======
+#NB: Part 2
 calculate_bmi(170, 63)
+
 =======
   ## part 5: # add the BMI value to the data
   patients$bmi <- calculate_bmi(patients$weight, patients$height)
