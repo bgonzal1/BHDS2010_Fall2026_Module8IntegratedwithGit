@@ -19,3 +19,44 @@ calculate_bmi(170, 63)
   # Using the mapply() function
   patients$bmi_cat <- mapply(categorize_bmi, patients$weight, patients$height)
  main
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ #refreshing the patients data, and creating a for loop that will use both calculate bmi and categorize bmi to store this values to the patient data. show the first few obs of the dataset
+ 
+ patients <- data.frame(
+   
+   weight = c(140, 170, 120, 190, 200),
+   
+   height = c(65, 63, 40, 80, 70)
+   
+ )
+ 
+ patients$bmi <- NA_real_
+ 
+ patients$bmi_cat <- NA_character_
+ 
+ for (i in 1:nrow(patients)) {
+   
+   patients$bmi[i] <- calculate_bmi(
+     
+     patients$weight[i],
+     
+     patients$height[i]
+     
+   )
+   
+   patients$bmi_cat[i] <- categorize_bmi(
+     
+     patients$weight[i],
+     
+     patients$height[i]
+     
+   )
+   
+ }
