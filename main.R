@@ -14,8 +14,4 @@
 calculate_bmi(170, 63)
 
 
-  ## part 5: # add the BMI value to the data
-  patients$bmi <- calculate_bmi(patients$weight, patients$height)
-  # Using the mapply() function
-  patients$bmi_cat <- mapply(categorize_bmi, patients$weight, patients$height)
- main
+ 
